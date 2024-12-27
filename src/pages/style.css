@@ -1,0 +1,25 @@
+.typewriter-animation {
+    overflow: hidden; /* Ensures no extra characters appear */
+    white-space: nowrap;
+    border-right: 2px solid #4caf50; /* Simulates cursor */
+    animation: typing 4s steps(50, end), blink 0.5s step-end infinite alternate;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #4caf50;
+    }
+  }
+  
