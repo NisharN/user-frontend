@@ -29,7 +29,7 @@ const Login = () => {
       const response = await axios.post('http://localhost:4000/auth/login', values);
       if (response.status === 201) {
         localStorage.setItem('token', response.data.token);
-        if (values.email === 'nisharadmin@gmail.com' && values.password === 'admin@03') {
+        if (values.email === process.env.ADMIN_EMAIL && values.password === process.env.ADMIN_PASSWORD) {
           navigate('/admin');
         } else {
           navigate('/');

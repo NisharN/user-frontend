@@ -135,11 +135,16 @@ const Admin = () => {
       case 'gender':
         sortedUsers = [...users].sort((a, b) => a.gender.localeCompare(b.gender));
         break;
+      
       case 'a-z':
         sortedUsers = [...users].sort((a, b) => a.username.localeCompare(b.username));
         break;
       case 'newest':
         sortedUsers = [...users].sort((a, b) => b.id - a.id);
+        break;
+        // i want to sort the users by pending status to first 
+      case 'pending':
+        sortedUsers = [...users].sort((a, b) => a.status.localeCompare(b.status));
         break;
       default:
         sortedUsers = users;
@@ -251,9 +256,10 @@ const Admin = () => {
         >
           <option value="">Sort by...</option>
           <option value="age">Age</option>
-          <option value="gender">Gender</option>
+          <option value="gender">gender</option>
           <option value="a-z">A-Z</option>
           <option value="newest">Newest to Oldest</option>
+          <option value="pending">pending</option>
         </select>
       </div>
 
